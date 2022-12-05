@@ -1,0 +1,14 @@
+{
+    "name": "pithyone/think-wechat",
+    "description": "企业微信SDK for ThinkPHP5",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "pithyone/wechat": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "think\\": "src/"
+        }
+    }
+}

@@ -1,0 +1,76 @@
+<form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Opentime')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-opentime" data-rule="required" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[opentime]" type="text" value="{:$row.opentime?datetime($row.opentime):''}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Open')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-open" data-rule="required" class="form-control" step="0.00000001" name="row[open]" type="number" value="{$row.open|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('High')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-high" data-rule="required" class="form-control" step="0.00000001" name="row[high]" type="number" value="{$row.high|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Low')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-low" data-rule="required" class="form-control" step="0.00000001" name="row[low]" type="number" value="{$row.low|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Close')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-close" data-rule="required" class="form-control" step="0.00000001" name="row[close]" type="number" value="{$row.close|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Volume')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-volume" data-rule="required" class="form-control" step="0.00000001" name="row[volume]" type="number" value="{$row.volume|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Closetime')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-closetime" data-rule="required" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[closetime]" type="text" value="{:$row.closetime?datetime($row.closetime):''}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Amount')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-amount" data-rule="required" class="form-control" step="0.00000001" name="row[amount]" type="number" value="{$row.amount|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Num')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-num" data-rule="required" class="form-control" name="row[num]" type="number" value="{$row.num|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Volume_active')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-volume_active" data-rule="required" class="form-control" step="0.00000001" name="row[volume_active]" type="number" value="{$row.volume_active|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Amount_active')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-amount_active" data-rule="required" class="form-control" step="0.00000001" name="row[amount_active]" type="number" value="{$row.amount_active|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-primary btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>

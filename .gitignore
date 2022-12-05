@@ -1,0 +1,12 @@
+/nbproject/
+/runtime/*
+*.log
+.env
+.svn
+/backup/panel/*
+.user.ini
+/public/uploads/*
+.DS_Store
+.well-known/
+.well-known/*
+nohup.out
