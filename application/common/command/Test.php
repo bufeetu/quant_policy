@@ -7,7 +7,8 @@ use think\console\Input;
 use think\console\Output;
 use think\console\input\Argument;
 use think\console\input\Option;
-use app\common\service\Test as Service;
+
+use Lin\Binance\Binance;
 
 /**
  * php think test
@@ -22,14 +23,16 @@ class Test extends Command
 
     protected function execute(Input $input, Output $output)
     {
-        $res=(new Service())
-            ->setParams('symbol', 'btcusdt')
-            ->run();
-        if ($res['code']!=0) {
-            $output->writeln($res['msg']);
-            return;
-        }
-        $output->writeln($res['msg']);
+
+        $Binance=new Binance();
+
+        $rows=$Binance->system()->get24hr([
+            'symbol'=>'BTCUSDT',
+        ]);
+
+
+
+        $output->writeln($rows);
         $output->writeln("end.");
     }
 }
