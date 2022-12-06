@@ -7,7 +7,6 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                 extend: {
                     index_url: 'market/index' + location.search,
                     add_url: 'market/add',
-                    edit_url: 'market/edit',
                     del_url: 'market/del',
                     multi_url: 'market/multi',
                     import_url: 'market/import',
@@ -44,15 +43,31 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {field: 'lowPrice', title: __('Lowprice'), operate:'BETWEEN'},
                         {field: 'volume', title: __('Volume'), operate:'BETWEEN'},
                         {field: 'quoteVolume', title: __('Quotevolume'), operate:'BETWEEN'},
-                        {field: 'openTime', title: __('Opentime')},
-                        {field: 'closeTime', title: __('Closetime')},
+                        {
+                            field: 'openTime',
+                            title: __('Opentime'),
+                            formatter: Table.api.formatter.datetime
+                        },
+                        {
+                            field: 'closeTime',
+                            title: __('Closetime'),
+                            formatter: Table.api.formatter.datetime
+                        },
                         {field: 'firstId', title: __('Firstid')},
                         {field: 'lastId', title: __('Lastid')},
                         {field: 'count', title: __('Count')},
                         {field: 'weigh', title: __('Weigh'), operate: false},
                         {field: 'switch', title: __('Switch'), searchList: {"1":__('Yes'),"0":__('No')}, table: table, formatter: Table.api.formatter.toggle},
-                        {field: 'createtime', title: __('Createtime')},
-                        {field: 'updatetime', title: __('Updatetime')},
+                        {
+                            field: 'createtime',
+                            title: __('Createtime'),
+                            formatter: Table.api.formatter.datetime
+                        },
+                        {
+                            field: 'updatetime',
+                            title: __('Updatetime'),
+                            formatter: Table.api.formatter.datetime
+                        },
                         {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate}
                     ]
                 ]
@@ -62,9 +77,6 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
             Table.api.bindevent(table);
         },
         add: function () {
-            Controller.api.bindevent();
-        },
-        edit: function () {
             Controller.api.bindevent();
         },
         api: {

@@ -2,9 +2,10 @@
 
 return [
     'Id'                 => 'ID',
-    'Symbol'             => '标题',
+    'Symbol'             => '交易对',
     'Pricechange'        => '涨跌价格',
     'Pricechangepercent' => '涨跌幅',
+    'Weightedavgprice' => 'weightedavgprice',
     'Prevcloseprice'     => '前收盘价',
     'Lastprice'          => '最新成交价',
     'Lastqty'            => '最新成交量',
