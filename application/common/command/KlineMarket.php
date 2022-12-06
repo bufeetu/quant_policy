@@ -46,9 +46,9 @@ class KlineMarket extends Command
         Db::startTrans();
         try {
             foreach ($rows as $row) {
-                $res=Model::where(['symbol'=>$row['symbol']])->update($row);
+                $res=(new Model())->save($row, ['symbol'=>$row['symbol']]);
                 if (!$res) {
-                    exception('保存失败'.$row['symbol']);
+                    exception('更新失败'.$row['symbol']);
                 }
             }
             Db::commit();
