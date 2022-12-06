@@ -44,14 +44,12 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {field: 'volume', title: __('Volume'), operate:'BETWEEN'},
                         {field: 'quoteVolume', title: __('Quotevolume'), operate:'BETWEEN'},
                         {
-                            field: 'openTime',
-                            title: __('Opentime'),
-                            formatter: Table.api.formatter.datetime
+                            field: 'openTime_text',
+                            title: __('OpentimeText'),
                         },
                         {
-                            field: 'closeTime',
-                            title: __('Closetime'),
-                            formatter: Table.api.formatter.datetime
+                            field: 'closeTime_text',
+                            title: __('ClosetimeText'),
                         },
                         {field: 'firstId', title: __('Firstid')},
                         {field: 'lastId', title: __('Lastid')},

@@ -8,13 +8,13 @@ use think\Model;
 class Market extends Model
 {
 
-    
 
-    
+
+
 
     // 表名
     protected $name = 'market';
-    
+
     // 自动写入时间戳字段
     protected $autoWriteTimestamp = 'int';
 
@@ -28,7 +28,7 @@ class Market extends Model
         'openTime_text',
         'closeTime_text'
     ];
-    
+
 
     protected static function init()
     {
@@ -38,12 +38,13 @@ class Market extends Model
         });
     }
 
-    
+
 
 
 
     public function getOpentimeTextAttr($value, $data)
     {
+        $data['openTime']=substr($data['openTime'],0,10);
         $value = $value ? $value : (isset($data['openTime']) ? $data['openTime'] : '');
         return is_numeric($value) ? date("Y-m-d H:i:s", $value) : $value;
     }
@@ -51,6 +52,8 @@ class Market extends Model
 
     public function getClosetimeTextAttr($value, $data)
     {
+
+        $data['closeTime']=substr($data['closeTime'], 0, 10);
         $value = $value ? $value : (isset($data['closeTime']) ? $data['closeTime'] : '');
         return is_numeric($value) ? date("Y-m-d H:i:s", $value) : $value;
     }
