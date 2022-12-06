@@ -22,11 +22,12 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                 pk: 'id',
                 sortName: 'weigh',
                 fixedColumns: true,
-                fixedRightNumber: 1,
+                fixedNumber: 2,
+                // fixedRightNumber: 1,
                 columns: [
                     [
                         {checkbox: true},
-                        {field: 'id', title: __('Id')},
+                        {field: 'id', title: __('Id'),visible:false},
                         {field: 'symbol', title: __('Symbol'), operate: 'LIKE'},
                         {field: 'priceChange', title: __('Pricechange'), operate:'BETWEEN'},
                         {field: 'priceChangePercent', title: __('Pricechangepercent'), operate:'BETWEEN'},
