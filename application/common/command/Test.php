@@ -27,12 +27,11 @@ class Test extends Command
         $Binance=new Binance();
 
         $rows=$Binance->system()->get24hr([
-            'symbol'=>'BTCUSDT',
+            // 'symbol'=>'BTCUSDT',
+            'symbols'=>'["BTCUSDT","BNBUSDT"]',
         ]);
-
-
-
-        $output->writeln($rows);
+        var_dump($rows);
+        // $output->writeln($rows);
         $output->writeln("end.");
     }
 }
