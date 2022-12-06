@@ -129,8 +129,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form', 'template'], function
                                     icon: 'fa fa-list',
                                     url: 'example/bootstraptable/detail',
                                     callback: function (data) {
-                                        Layer.alert("接收到回传数据：" + JSON.stringify(data), { title: "回传数据" });
-                                        table.bootstrapTable('refresh', {});
+                                        Layer.alert("接收到回传数据：" + JSON.stringify(data), {title: "回传数据"});
                                     }
                                 },
                                 {
@@ -142,7 +141,6 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form', 'template'], function
                                     url: 'example/bootstraptable/detail',
                                     success: function (data, ret) {
                                         Layer.alert(ret.msg + ",返回数据：" + JSON.stringify(data));
-                                        table.bootstrapTable('refresh', {});
                                         //如果需要阻止成功提示，则必须使用return false;
                                         //return false;
                                     },

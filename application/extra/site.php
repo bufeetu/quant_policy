@@ -1,7 +1,7 @@
 <?php
 
 return array (
-  'name' => '基础网站系统',
+  'name' => '麒麟量化',
   'beian' => '',
   'cdnurl' => '',
   'version' => '1.0.1',

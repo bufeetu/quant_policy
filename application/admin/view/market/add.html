@@ -1,0 +1,152 @@
+<form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Symbol')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-symbol" data-rule="required" class="form-control" name="row[symbol]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Pricechange')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-priceChange" min="0" class="form-control" step="0.00000001" name="row[priceChange]" type="number">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Pricechangepercent')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-priceChangePercent" min="0" class="form-control" step="0.001" name="row[priceChangePercent]" type="number">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Weightedavgprice')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-weightedAvgPrice" min="0" class="form-control" step="0.00000001" name="row[weightedAvgPrice]" type="number">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Prevcloseprice')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-prevClosePrice" min="0" class="form-control" step="0.00000001" name="row[prevClosePrice]" type="number">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Lastprice')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-lastPrice" min="0" class="form-control" step="0.00000001" name="row[lastPrice]" type="number">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Lastqty')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-lastQty" min="0" class="form-control" step="0.00000001" name="row[lastQty]" type="number">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Bidprice')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-bidPrice" min="0" class="form-control" step="0.00000001" name="row[bidPrice]" type="number">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Bidqty')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-bidQty" min="0" class="form-control" step="0.00000001" name="row[bidQty]" type="number">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Askprice')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-askPrice" min="0" class="form-control" step="0.00000001" name="row[askPrice]" type="number">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Askqty')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-askQty" min="0" class="form-control" step="0.00000001" name="row[askQty]" type="number">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Openprice')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-openPrice" min="0" class="form-control" step="0.00000001" name="row[openPrice]" type="number">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Highprice')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-highPrice" min="0" class="form-control" step="0.00000001" name="row[highPrice]" type="number">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Lowprice')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-lowPrice" min="0" class="form-control" step="0.00000001" name="row[lowPrice]" type="number">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Volume')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-volume" min="0" class="form-control" step="0.00000001" name="row[volume]" type="number">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Quotevolume')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-quoteVolume" min="0" class="form-control" step="0.00000001" name="row[quoteVolume]" type="number">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Opentime')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-openTime" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[openTime]" type="text" value="{:date('Y-m-d H:i:s')}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Closetime')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-closeTime" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[closeTime]" type="text" value="{:date('Y-m-d H:i:s')}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Firstid')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-firstId" min="0" class="form-control" name="row[firstId]" type="number">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Lastid')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-lastId" min="0" class="form-control" name="row[lastId]" type="number">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-count" min="0" class="form-control" name="row[count]" type="number">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Weigh')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-weigh" class="form-control" name="row[weigh]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Switch')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            
+            <input  id="c-switch" name="row[switch]" type="hidden" value="1">
+            <a href="javascript:;" data-toggle="switcher" class="btn-switcher" data-input-id="c-switch" data-yes="1" data-no="0" >
+                <i class="fa fa-toggle-on text-success  fa-2x"></i>
+            </a>
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-primary btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>
