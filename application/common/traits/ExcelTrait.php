@@ -53,7 +53,11 @@ trait ExcelTrait
         }
         $fileType = 'Xlsx';
         $writer = IOFactory::createWriter($spreadsheet, $fileType);
-        $writer->save($dir.$fileName.'.'.$fileType);
+        $path=$dir.$fileName.'.'.$fileType;
+        if (!file_exists($path)) {
+            $writer->save($path);
+        }
+
         unset($spreadsheet);
         unset($sheet);
         unset($writer);
