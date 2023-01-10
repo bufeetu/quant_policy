@@ -5,7 +5,6 @@ namespace app\common\service;
 use Lin\Binance\Binance;
 use app\common\service\BaseService;
 use think\Queue;
-use think\Log;
 use think\Cache;
 
 class KlineCollect extends BaseService
