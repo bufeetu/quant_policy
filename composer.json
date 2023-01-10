@@ -32,10 +32,6 @@
         "ext-bcmath": "*",
         "txthinking/mailer": "^2.0",
         "topthink/think-migration": "1.*",
-        "tencent-ad/marketing-api-php-sdk": "*",
-        "pithyone/think-wechat": "^2.0",
-        "hillpy/mini-program-sdk": "1.*",
-        "icharle/wxtool": "1.0",
         "linwj/binance": "^2.2"
     },
     "config": {

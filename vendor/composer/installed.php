@@ -6,20 +6,11 @@
     'aliases' => 
     array (
     ),
-    'reference' => '97c3f8a42dfc73ea1942e33d4738f88c4fed0bbf',
+    'reference' => '3ed5db0cb9e485d5d0240f5543d881c67fc2e209',
     'name' => 'karsonzhang/fastadmin',
   ),
   'versions' => 
   array (
-    'doctrine/collections' => 
-    array (
-      'pretty_version' => '1.6.8',
-      'version' => '1.6.8.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '1958a744696c6bb3bb0d28db2611dc11610e78af',
-    ),
     'easywechat-composer/easywechat-composer' => 
     array (
       'pretty_version' => '1.4.1',
@@ -40,12 +31,12 @@
     ),
     'guzzlehttp/promises' => 
     array (
-      'pretty_version' => '1.5.1',
-      'version' => '1.5.1.0',
+      'pretty_version' => '1.5.2',
+      'version' => '1.5.2.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'fe752aedc9fd8fcca3fe7ad05d419d32998a06da',
+      'reference' => 'b94b2807d85443f9719887892882d0329d1e2598',
     ),
     'guzzlehttp/psr7' => 
     array (
@@ -56,24 +47,6 @@
       ),
       'reference' => 'e98e3e6d4f86621a9b75f623996e6bbdeb4b9318',
     ),
-    'hillpy/mini-program-sdk' => 
-    array (
-      'pretty_version' => '1.3.1',
-      'version' => '1.3.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '8cac4d67677f542e13d3af5d15130c66013e0384',
-    ),
-    'icharle/wxtool' => 
-    array (
-      'pretty_version' => '1.0',
-      'version' => '1.0.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '59b09c61152e0eb85ffae94b47614c5acaca57b1',
-    ),
     'karsonzhang/fastadmin' => 
     array (
       'pretty_version' => 'dev-master',
@@ -81,7 +54,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '97c3f8a42dfc73ea1942e33d4738f88c4fed0bbf',
+      'reference' => '3ed5db0cb9e485d5d0240f5543d881c67fc2e209',
     ),
     'karsonzhang/fastadmin-addons' => 
     array (
@@ -191,24 +164,6 @@
       ),
       'reference' => 'a94b3a4db7fb774b3d78dad2315ddc07629e1bed',
     ),
-    'pithyone/think-wechat' => 
-    array (
-      'pretty_version' => '2.0.0',
-      'version' => '2.0.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '9785d9759e389a5797b7ac4eb5d0631cb5f28a90',
-    ),
-    'pithyone/wechat' => 
-    array (
-      'pretty_version' => '2.0.2',
-      'version' => '2.0.2.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'a6d2086b06caca30208e2ed30efb6e7437e4e51b',
-    ),
     'psr/cache' => 
     array (
       'pretty_version' => '1.0.1',
@@ -227,19 +182,12 @@
     ),
     'psr/container' => 
     array (
-      'pretty_version' => '1.1.1',
-      'version' => '1.1.1.0',
+      'pretty_version' => '1.1.2',
+      'version' => '1.1.2.0',
       'aliases' => 
       array (
       ),
-      'reference' => '8622567409010282b7aeebe4bb841fe98b58dcaf',
-    ),
-    'psr/container-implementation' => 
-    array (
-      'provided' => 
-      array (
-        0 => '1.0',
-      ),
+      'reference' => '513e0666f7216c7459170d56df27dfcefe1689ea',
     ),
     'psr/event-dispatcher-implementation' => 
     array (
@@ -307,12 +255,12 @@
     ),
     'symfony/cache' => 
     array (
-      'pretty_version' => 'v4.4.43',
-      'version' => '4.4.43.0',
+      'pretty_version' => 'v4.4.48',
+      'version' => '4.4.48.0',
       'aliases' => 
       array (
       ),
-      'reference' => '3b3c6019f3df2fa73d15dfed133e432a9801d7eb',
+      'reference' => '3b98ed664887ad197b8ede3da2432787212eb915',
     ),
     'symfony/cache-contracts' => 
     array (
@@ -330,15 +278,6 @@
         0 => '1.0|2.0',
       ),
     ),
-    'symfony/dependency-injection' => 
-    array (
-      'pretty_version' => 'v4.4.43',
-      'version' => '4.4.43.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '8d0ae6d87ceea5f3a352413f9d1f71ed2234dcbd',
-    ),
     'symfony/deprecation-contracts' => 
     array (
       'pretty_version' => 'v2.5.2',
@@ -350,12 +289,12 @@
     ),
     'symfony/event-dispatcher' => 
     array (
-      'pretty_version' => 'v4.4.42',
-      'version' => '4.4.42.0',
+      'pretty_version' => 'v4.4.44',
+      'version' => '4.4.44.0',
       'aliases' => 
       array (
       ),
-      'reference' => '708e761740c16b02c86e3f0c932018a06b895d40',
+      'reference' => '1e866e9e5c1b22168e0ce5f0b467f19bba61266a',
     ),
     'symfony/event-dispatcher-contracts' => 
     array (
@@ -384,75 +323,75 @@
     ),
     'symfony/http-foundation' => 
     array (
-      'pretty_version' => 'v4.4.43',
-      'version' => '4.4.43.0',
+      'pretty_version' => 'v4.4.49',
+      'version' => '4.4.49.0',
       'aliases' => 
       array (
       ),
-      'reference' => '4441dada27f9208e03f449d73cb9253c639e53c5',
+      'reference' => '191413c7b832c015bb38eae963f2e57498c3c173',
     ),
     'symfony/mime' => 
     array (
-      'pretty_version' => 'v5.4.10',
-      'version' => '5.4.10.0',
+      'pretty_version' => 'v5.4.17',
+      'version' => '5.4.17.0',
       'aliases' => 
       array (
       ),
-      'reference' => '02265e1e5111c3cd7480387af25e82378b7ab9cc',
+      'reference' => '2a83d82efc91c3f03a23c8b47a896df168aa5c63',
     ),
     'symfony/polyfill-intl-idn' => 
     array (
-      'pretty_version' => 'v1.26.0',
-      'version' => '1.26.0.0',
+      'pretty_version' => 'v1.27.0',
+      'version' => '1.27.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '59a8d271f00dd0e4c2e518104cc7963f655a1aa8',
+      'reference' => '639084e360537a19f9ee352433b84ce831f3d2da',
     ),
     'symfony/polyfill-intl-normalizer' => 
     array (
-      'pretty_version' => 'v1.26.0',
-      'version' => '1.26.0.0',
+      'pretty_version' => 'v1.27.0',
+      'version' => '1.27.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '219aa369ceff116e673852dce47c3a41794c14bd',
+      'reference' => '19bd1e4fcd5b91116f14d8533c57831ed00571b6',
     ),
     'symfony/polyfill-mbstring' => 
     array (
-      'pretty_version' => 'v1.26.0',
-      'version' => '1.26.0.0',
+      'pretty_version' => 'v1.27.0',
+      'version' => '1.27.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '9344f9cb97f3b19424af1a21a3b0e75b0a7d8d7e',
+      'reference' => '8ad114f6b39e2c98a8b0e3bd907732c207c2b534',
     ),
     'symfony/polyfill-php72' => 
     array (
-      'pretty_version' => 'v1.26.0',
-      'version' => '1.26.0.0',
+      'pretty_version' => 'v1.27.0',
+      'version' => '1.27.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'bf44a9fd41feaac72b074de600314a93e2ae78e2',
+      'reference' => '869329b1e9894268a8a61dabb69153029b7a8c97',
     ),
     'symfony/polyfill-php73' => 
     array (
-      'pretty_version' => 'v1.26.0',
-      'version' => '1.26.0.0',
+      'pretty_version' => 'v1.27.0',
+      'version' => '1.27.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'e440d35fa0286f77fb45b79a03fedbeda9307e85',
+      'reference' => '9e8ecb5f92152187c4799efd3c96b78ccab18ff9',
     ),
     'symfony/polyfill-php80' => 
     array (
-      'pretty_version' => 'v1.26.0',
-      'version' => '1.26.0.0',
+      'pretty_version' => 'v1.27.0',
+      'version' => '1.27.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'cfa0ae98841b9e461207c13ab093d76b0fa7bace',
+      'reference' => '7a6ff3f1959bb01aefccb463a0f2cd3d3d2fd936',
     ),
     'symfony/psr-http-message-bridge' => 
     array (
@@ -472,13 +411,6 @@
       ),
       'reference' => '4b426aac47d6427cc1a1d0f7e2ac724627f5966c',
     ),
-    'symfony/service-implementation' => 
-    array (
-      'provided' => 
-      array (
-        0 => '1.0|2.0',
-      ),
-    ),
     'symfony/var-exporter' => 
     array (
       'pretty_version' => 'v4.4.43',
@@ -487,15 +419,6 @@
       array (
       ),
       'reference' => '4a7a3a3d55c471d396e6d28011368b7b83cb518b',
-    ),
-    'tencent-ad/marketing-api-php-sdk' => 
-    array (
-      'pretty_version' => 'v1.1.39',
-      'version' => '1.1.39.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '7ca0d6ea55bd8be60e8a1df300ddf792cfa17af6',
     ),
     'topthink/framework' => 
     array (
@@ -572,12 +495,12 @@
     ),
     'workerman/workerman' => 
     array (
-      'pretty_version' => 'v4.0.42',
-      'version' => '4.0.42.0',
+      'pretty_version' => 'v4.1.5',
+      'version' => '4.1.5.0',
       'aliases' => 
       array (
       ),
-      'reference' => '83f09b50eaf7412504604030daa9e1f9c767e6c3',
+      'reference' => '16bcfc2c7574feea46cdadaaa8ae73f14d464b21',
     ),
   ),
 );

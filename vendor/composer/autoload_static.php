@@ -94,19 +94,13 @@ class ComposerStaticInit73f9e72fede2c36621e52f7b610bbb65
             'think\\captcha\\' => 14,
             'think\\' => 6,
         ),
-        'h' => 
-        array (
-            'hillpy\\MiniProgramSDK\\' => 22,
-        ),
         'W' => 
         array (
             'Workerman\\' => 10,
-            'WeWork\\' => 7,
         ),
         'T' => 
         array (
             'Tx\\' => 3,
-            'TencentAds\\' => 11,
         ),
         'S' => 
         array (
@@ -124,7 +118,6 @@ class ComposerStaticInit73f9e72fede2c36621e52f7b610bbb65
             'Symfony\\Component\\HttpFoundation\\' => 33,
             'Symfony\\Component\\Finder\\' => 25,
             'Symfony\\Component\\EventDispatcher\\' => 34,
-            'Symfony\\Component\\DependencyInjection\\' => 38,
             'Symfony\\Component\\Cache\\' => 24,
             'Symfony\\Bridge\\PsrHttpMessage\\' => 30,
         ),
@@ -153,10 +146,6 @@ class ComposerStaticInit73f9e72fede2c36621e52f7b610bbb65
         array (
             'Lin\\Binance\\' => 12,
         ),
-        'I' => 
-        array (
-            'Icharle\\Wxtool\\' => 15,
-        ),
         'G' => 
         array (
             'GuzzleHttp\\Psr7\\' => 16,
@@ -168,10 +157,6 @@ class ComposerStaticInit73f9e72fede2c36621e52f7b610bbb65
         array (
             'EasyWeChat\\' => 11,
             'EasyWeChatComposer\\' => 19,
-        ),
-        'D' => 
-        array (
-            'Doctrine\\Common\\Collections\\' => 28,
         ),
         'C' => 
         array (
@@ -199,29 +184,16 @@ class ComposerStaticInit73f9e72fede2c36621e52f7b610bbb65
         'think\\' => 
         array (
             0 => __DIR__ . '/..' . '/karsonzhang/fastadmin-addons/src',
-            1 => __DIR__ . '/..' . '/pithyone/think-wechat/src',
-            2 => __DIR__ . '/../..' . '/thinkphp/library/think',
-            3 => __DIR__ . '/..' . '/topthink/think-queue/src',
-        ),
-        'hillpy\\MiniProgramSDK\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/hillpy/mini-program-sdk/src',
+            1 => __DIR__ . '/../..' . '/thinkphp/library/think',
+            2 => __DIR__ . '/..' . '/topthink/think-queue/src',
         ),
         'Workerman\\' => 
         array (
             0 => __DIR__ . '/..' . '/workerman/workerman',
         ),
-        'WeWork\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/pithyone/wechat/src',
-        ),
         'Tx\\' => 
         array (
             0 => __DIR__ . '/..' . '/txthinking/mailer/src',
-        ),
-        'TencentAds\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/tencent-ad/marketing-api-php-sdk/src/TencentAds',
         ),
         'Symfony\\Polyfill\\Php80\\' => 
         array (
@@ -278,10 +250,6 @@ class ComposerStaticInit73f9e72fede2c36621e52f7b610bbb65
         'Symfony\\Component\\EventDispatcher\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/event-dispatcher',
-        ),
-        'Symfony\\Component\\DependencyInjection\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/dependency-injection',
         ),
         'Symfony\\Component\\Cache\\' => 
         array (
@@ -343,10 +311,6 @@ class ComposerStaticInit73f9e72fede2c36621e52f7b610bbb65
         array (
             0 => __DIR__ . '/..' . '/linwj/binance/src',
         ),
-        'Icharle\\Wxtool\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/icharle/wxtool/src',
-        ),
         'GuzzleHttp\\Psr7\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
@@ -370,10 +334,6 @@ class ComposerStaticInit73f9e72fede2c36621e52f7b610bbb65
         'EasyWeChatComposer\\' => 
         array (
             0 => __DIR__ . '/..' . '/easywechat-composer/easywechat-composer/src',
-        ),
-        'Doctrine\\Common\\Collections\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/doctrine/collections/lib/Doctrine/Common/Collections',
         ),
         'Complex\\' => 
         array (
