@@ -180,7 +180,7 @@ return [
         // 驱动方式
         'type'   => 'redis',
         'host'	=>	'127.0.0.1',
-        'password'   => 'aidarui521',
+        'password'   => '',
         'prefix' => '',
         'expire' => 0,
     ],
@@ -191,7 +191,7 @@ return [
         'default'    => 'default',
         'host'       => '127.0.0.1',
         'port'       => 6379,
-        'password'   => 'aidarui521',
+        'password'   => '',
         'select'     => 0,
         'timeout'    => 0,
         'persistent' => false
