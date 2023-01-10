@@ -11,8 +11,5 @@ php think kline_collect ltcusdt 1d 2018-06-15
 
 队列监听
 php think queue:listen
-#### 行情更新
-建议宝塔定时任务
-php think klineMarket
 #### 后台模块
 waiting...

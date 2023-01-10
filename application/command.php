@@ -20,5 +20,4 @@ return [
 
     'app\common\command\Test',
     'app\common\command\KlineCollect',
-    'app\common\command\KlineMarket',
 ];
