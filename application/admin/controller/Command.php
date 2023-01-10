@@ -25,7 +25,7 @@ class Command extends Backend
     public function _initialize()
     {
         parent::_initialize();
-        $this->model = model('Command');
+        $this->model = new \app\admin\model\Command;
         $this->view->assign("statusList", $this->model->getStatusList());
     }
 
@@ -128,7 +128,7 @@ class Command extends Backend
     }
 
     /**
-     * 执行命令
+     * 生成命令
      */
     public function command($action = '')
     {
@@ -213,6 +213,12 @@ class Command extends Backend
 
     protected function doexecute($commandtype, $argv)
     {
+        if (!config('app_debug')) {
+            $this->error("只允许在开发环境下执行命令");
+        }
+        if (preg_match("/([;\|&]+)/", implode(' ', $argv))) {
+            $this->error("不支持的命令参数");
+        }
         $commandName = "\\app\\admin\\command\\" . ucfirst($commandtype);
         $input = new Input($argv);
         $output = new \addons\command\library\Output();
@@ -238,6 +244,5 @@ class Command extends Backend
         $this->model->save();
         return $result;
     }
-
 
 }

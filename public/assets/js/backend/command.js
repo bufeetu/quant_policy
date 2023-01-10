@@ -28,7 +28,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form', 'template'], function
                         {field: 'type', title: __('Type'), formatter: Table.api.formatter.search},
                         {field: 'type_text', title: __('Type')},
                         {
-                            field: 'command', title: __('Command'), formatter: function (value, row, index) {
+                            field: 'command', title: __('Command'), renderDefault: false, formatter: function (value, row, index) {
                                 return '<input type="text" class="form-control" value="' + value + '">';
                             }
                         },

@@ -34,7 +34,11 @@ class Umeditor extends Addons
     public function configInit(&$params)
     {
         $config = $this->getConfig();
-        $params['umeditor'] = ['classname' => $config['classname']??'.editor'];
+        $params['umeditor'] = [
+            'classname'      => $config['classname'] ?? '.editor',
+            'baidumapkey'    => $config['baidumapkey'] ?? '',
+            'baidumapcenter' => $config['baidumapcenter'] ?? ''
+        ];
     }
 
 }

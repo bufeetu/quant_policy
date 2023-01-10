@@ -18,16 +18,73 @@ require.config({
 });
 
 require(['form', 'upload'], function (Form, Upload) {
+    var getFileFromBase64, uploadFiles;
+    uploadFiles = async function (files, callback) {
+        var self = this;
+        for (var i = 0; i < files.length; i++) {
+            try {
+                await new Promise(function (resolve) {
+                    var url, html, file;
+                    file = files[i];
+                    Upload.api.send(file, function (data) {
+                        url = Fast.api.cdnurl(data.url, true);
+                        if (typeof callback === 'function') {
+                            callback.call(this, url, data)
+                        } else {
+                            if (file.type.indexOf("image") !== -1) {
+                                self.execCommand('insertImage', {
+                                    src: url,
+                                    title: file.name || "",
+                                });
+                            } else {
+                                self.execCommand('link', {
+                                    href: url,
+                                    title: file.name || "",
+                                    target: '_blank'
+                                });
+                            }
+                        }
+                        resolve();
+                    }, function () {
+                        resolve();
+                    });
+                });
+            } catch (e) {
+
+            }
+        }
+    };
+    getFileFromBase64 = function (data, url) {
+        var arr = data.split(','), mime = arr[0].match(/:(.*?);/)[1],
+            bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n);
+        while (n--) {
+            u8arr[n] = bstr.charCodeAt(n);
+        }
+        var filename, suffix;
+        if (typeof url != 'undefined') {
+            var urlArr = url.split('.');
+            filename = url.substr(url.lastIndexOf('/') + 1);
+            suffix = urlArr.pop();
+        } else {
+            filename = Math.random().toString(36).substring(5, 15);
+        }
+        if (!suffix) {
+            suffix = data.substring("data:image/".length, data.indexOf(";base64"));
+        }
+
+        var exp = new RegExp("\\." + suffix + "$", "i");
+        filename = exp.test(filename) ? filename : filename + "." + suffix;
+        var file = new File([u8arr], filename, {type: mime});
+        return file;
+    };
+
     //监听上传文本框的事件
     $(document).on("edui.file.change", ".edui-image-file", function (e, up, me, input, callback) {
-        for (var i = 0; i < this.files.length; i++) {
-            Upload.api.send(this.files[i], function (data) {
-                var url = data.url;
-                me.uploadComplete(JSON.stringify({url: url, state: "SUCCESS"}));
-            });
-        }
+        uploadFiles.call(me.editor, this.files, function (url, data) {
+            me.uploadComplete(JSON.stringify({url: url, state: "SUCCESS"}));
+        });
         up.updateInput(input);
-        me.toggleMask("Loading....");
+        me.toggleMask("上传中....");
         callback && callback();
     });
     var _bindevent = Form.events.bindevent;
@@ -37,59 +94,28 @@ require(['form', 'upload'], function (Form, Upload) {
 
             //重写编辑器加载
             UME.plugins['autoupload'] = function () {
-                var me = this;
-                me.setOpt('pasteImageEnabled', true);
-                me.setOpt('dropFileEnabled', true);
-                var sendAndInsertImage = function (file, editor) {
-                    try {
-                        Upload.api.send(file, function (data) {
-                            var url = Fast.api.cdnurl(data.url, true);
-                            editor.execCommand('insertimage', {
-                                src: url,
-                                _src: url
-                            });
-                        });
-                    } catch (er) {
-                    }
-                };
-
-                function getPasteImage(e) {
-                    return e.clipboardData && e.clipboardData.items && e.clipboardData.items.length == 1 && /^image\//.test(e.clipboardData.items[0].type) ? e.clipboardData.items : null;
-                }
-
-                function getDropImage(e) {
-                    return e.dataTransfer && e.dataTransfer.files ? e.dataTransfer.files : null;
-                }
-
-                me.addListener('ready', function () {
+                var that = this;
+                that.addListener('ready', function () {
                     if (window.FormData && window.FileReader) {
-                        var autoUploadHandler = function (e) {
-                            var hasImg = false,
-                                items;
-                            //获取粘贴板文件列表或者拖放文件列表
-                            items = e.type == 'paste' ? getPasteImage(e.originalEvent) : getDropImage(e.originalEvent);
-                            if (items) {
-                                var len = items.length,
-                                    file;
-                                while (len--) {
-                                    file = items[len];
-                                    if (file.getAsFile)
-                                        file = file.getAsFile();
-                                    if (file && file.size > 0 && /image\/\w+/i.test(file.type)) {
-                                        sendAndInsertImage(file, me);
-                                        hasImg = true;
-                                    }
-                                }
-                                if (hasImg)
-                                    return false;
+                        that.getOpt('pasteImageEnabled') && that.$body.on('paste', function (event) {
+                            var originalEvent;
+                            originalEvent = event.originalEvent;
+                            if (originalEvent.clipboardData && originalEvent.clipboardData.files.length > 0) {
+                                uploadFiles.call(that, originalEvent.clipboardData.files);
+                                return false;
                             }
-
-                        };
-                        me.getOpt('pasteImageEnabled') && me.$body.on('paste', autoUploadHandler);
-                        me.getOpt('dropFileEnabled') && me.$body.on('drop', autoUploadHandler);
+                        });
+                        that.getOpt('dropFileEnabled') && that.$body.on('drop', function (event) {
+                            var originalEvent;
+                            originalEvent = event.originalEvent;
+                            if (originalEvent.dataTransfer && originalEvent.dataTransfer.files.length > 0) {
+                                uploadFiles.call(that, originalEvent.dataTransfer.files);
+                                return false;
+                            }
+                        });
 
                         //取消拖放图片时出现的文字光标位置提示
-                        me.$body.on('dragover', function (e) {
+                        that.$body.on('dragover', function (e) {
                             if (e.originalEvent.dataTransfer.types[0] == 'Files') {
                                 return false;
                             }
@@ -115,8 +141,12 @@ require(['form', 'upload'], function (Form, Upload) {
                     outputXssFilter: false,
                     inputXssFilter: false,
                     autoFloatEnabled: false,
+                    pasteImageEnabled: true,
+                    dropFileEnabled: true,
+                    baiduMapKey: Config.umeditor.baidumapkey || '',
+                    baiduMapCenter: Config.umeditor.baidumapcenter || '',
                     imageUrl: '',
-                    imagePath: Config.upload.cdnurl,
+                    imagePath: '',
                     imageUploadCallback: function (file, fn) {
                         var me = this;
                         Upload.api.send(file, function (data) {
